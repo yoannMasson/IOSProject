@@ -1,41 +1,35 @@
 //
-//  MainViewController.swift
+//  DemandeInscriptionViewController.swift
 //  IOSProject
 //
-//  Created by Yoann MASSON on 13/02/2017.
+//  Created by Yoann MASSON on 15/02/2017.
 //  Copyright © 2017 Yoann MASSON. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class DemandeInscriptionViewController: UIViewController {
 
-    @IBOutlet var textFieldId: UIView!
-    @IBOutlet weak var texteFieldMdp: UITextField!
-    
+    @IBOutlet weak var identifiant: UITextField!
+    @IBOutlet weak var nom: UITextField!
+    @IBOutlet weak var prenom: UITextField!
+    @IBOutlet weak var mdp: UITextField!
+    @IBOutlet weak var confirmationmdp: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-       /* for i in 1...1000000000{
-            self.id.text="\(i)"
-        }*/
+
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func valider(_ sender: Any) {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBOutlet weak var id: UILabel!
     
-    func textFieldShouldReturn(textFieldId: UITextField) -> Bool {
-        textFieldId.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldShouldReturn(textFieldMdp: UITextField) -> Bool {
-        textFieldMdp.resignFirstResponder()
-        return true
-    }
+
     /*
     // MARK: - Navigation
 
@@ -45,4 +39,5 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 }

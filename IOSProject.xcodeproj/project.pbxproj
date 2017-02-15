@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA7BEB31E543F830013CCDA /* MainViewController.swift */; };
+		5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */; };
 		5CB1E7BD1E51A42200A424AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7BC1E51A42200A424AD /* AppDelegate.swift */; };
 		5CB1E7C01E51A42200A424AD /* IOSProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7BE1E51A42200A424AD /* IOSProject.xcdatamodeld */; };
 		5CB1E7C71E51A42200A424AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB1E7C51E51A42200A424AD /* Main.storyboard */; };
@@ -14,7 +16,6 @@
 		5CB1E7CC1E51A42200A424AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB1E7CA1E51A42200A424AD /* LaunchScreen.storyboard */; };
 		5CB1E7D71E51A42200A424AD /* IOSProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7D61E51A42200A424AD /* IOSProjectTests.swift */; };
 		5CB1E7E21E51A42200A424AD /* IOSProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7E11E51A42200A424AD /* IOSProjectUITests.swift */; };
-		5CB1E7F01E51B9A400A424AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7EF1E51B9A400A424AD /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CA7BEB31E543F830013CCDA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
+		5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemandeInscriptionViewController.swift; sourceTree = "<group>"; };
 		5CB1E7B91E51A42200A424AD /* IOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB1E7BC1E51A42200A424AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CB1E7BF1E51A42200A424AD /* IOSProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOSProject.xcdatamodel; sourceTree = "<group>"; };
@@ -48,7 +51,6 @@
 		5CB1E7DD1E51A42200A424AD /* IOSProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB1E7E11E51A42200A424AD /* IOSProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSProjectUITests.swift; sourceTree = "<group>"; };
 		5CB1E7E31E51A42200A424AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CB1E7EF1E51B9A400A424AD /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = IOSProject/MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,6 @@
 		5CB1E7B01E51A42200A424AD = {
 			isa = PBXGroup;
 			children = (
-				5CB1E7EF1E51B9A400A424AD /* MainViewController.swift */,
 				5CB1E7BB1E51A42200A424AD /* IOSProject */,
 				5CB1E7D51E51A42200A424AD /* IOSProjectTests */,
 				5CB1E7E01E51A42200A424AD /* IOSProjectUITests */,
@@ -100,12 +101,14 @@
 		5CB1E7BB1E51A42200A424AD /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				5CA7BEB31E543F830013CCDA /* MainViewController.swift */,
 				5CB1E7BC1E51A42200A424AD /* AppDelegate.swift */,
 				5CB1E7C51E51A42200A424AD /* Main.storyboard */,
 				5CB1E7C81E51A42200A424AD /* Assets.xcassets */,
 				5CB1E7CA1E51A42200A424AD /* LaunchScreen.storyboard */,
 				5CB1E7CD1E51A42200A424AD /* Info.plist */,
 				5CB1E7BE1E51A42200A424AD /* IOSProject.xcdatamodeld */,
+				5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				TargetAttributes = {
 					5CB1E7B81E51A42200A424AD = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					5CB1E7D11E51A42200A424AD = {
@@ -262,7 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CB1E7F01E51B9A400A424AD /* MainViewController.swift in Sources */,
+				5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */,
+				5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */,
 				5CB1E7BD1E51A42200A424AD /* AppDelegate.swift in Sources */,
 				5CB1E7C01E51A42200A424AD /* IOSProject.xcdatamodeld in Sources */,
 			);
@@ -416,10 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IOSProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "polytech-Masson.IOSProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = IOSProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "polytech-Masson.IOSProject";
@@ -509,6 +517,7 @@
 				5CB1E7E81E51A42200A424AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CB1E7E91E51A42200A424AD /* Build configuration list for PBXNativeTarget "IOSProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				5CB1E7EB1E51A42200A424AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CB1E7EC1E51A42200A424AD /* Build configuration list for PBXNativeTarget "IOSProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +535,7 @@
 				5CB1E7EE1E51A42200A424AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
