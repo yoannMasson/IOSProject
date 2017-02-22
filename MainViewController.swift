@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
 
@@ -21,7 +22,6 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
 
@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
         textField.resignFirstResponder()
         return true
     }
+    
     /*
     // MARK: - Navigation
 

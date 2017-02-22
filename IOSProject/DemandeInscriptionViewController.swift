@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class DemandeInscriptionViewController: UIViewController {
 
@@ -18,15 +19,18 @@ class DemandeInscriptionViewController: UIViewController {
     @IBOutlet weak var valider: UIButton!
     @IBOutlet weak var topLabel: UILabel!
     
-    let transitionEtud = "transitionEtud"
-    let transitionEnseignant = "transitionEnseignant"
-    let transitionRespo = "transitionRespo"
-    let transitionAdmin = "transitionAdmin"
+
+    var etat: String?
+    var backToConnexion = "backToConnexion"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //get Source
+        if let etat = self.etat{
+            self.topLabel.text = etat
+        }else{
+            self.topLabel.text = "groupe non reconnu"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,54 +41,52 @@ class DemandeInscriptionViewController: UIViewController {
     @IBAction func valider(_ sender: Any) {
         /** Testing that all the fiels are correctly filled */
         guard let testid = self.identifiant.text, testid != "" else{
-            self.alertError(errorMsg: "Problème d'Id", userInfo: "Il faut renseigner l'identifiant qui vous permettra de vous connecter")
+            DialogBoxHelper.alert(view:self,withTitle: "Problème d'Id", andMessage: "Il faut renseigner l'identifiant qui vous permettra de vous connecter")
             return
         }
         guard let testnom = self.nom.text, testnom != "" else{
-            self.alertError(errorMsg: "Problème de nom", userInfo: "Il faut renseigner votre nom dans le champ \"Nom\"")
+            DialogBoxHelper.alert(view:self,withTitle:  "Problème de nom", andMessage: "Il faut renseigner votre nom dans le champ \"Nom\"")
             return
         }
         guard let testprenom = self.prenom.text, testprenom != "" else{
-            self.alertError(errorMsg: "Problème de prenom", userInfo: "Il faut renseigner votre prénom dans le champ \"Prénom\"")
+            DialogBoxHelper.alert(view:self,withTitle:  "Problème de prenom", andMessage: "Il faut renseigner votre prénom dans le champ \"Prénom\"")
             return
         }
         guard let testmdp = self.mdp.text, testmdp != "" else{
-            self.alertError(errorMsg: "Problème de mdp", userInfo: "Il faut renseigner le mot de passe que vous souhaitez utiliser")
+            DialogBoxHelper.alert(view:self,withTitle:  "Problème de mdp", andMessage: "Il faut renseigner le mot de passe que vous souhaitez utiliser")
             return
         }
         
         guard let testconfirmationmdp = self.confirmationmdp.text, testconfirmationmdp == self.mdp.text else{
-            self.alertError(errorMsg: "Problème de confirmation", userInfo: "Merci de confirmer le mot de passe que vous souhaitez utiliser")
+            DialogBoxHelper.alert(view:self,withTitle: "Problème de confirmation", andMessage: "Merci de confirmer le mot de passe que vous souhaitez utiliser")
             return
         }
-    }
-    
-    
-    
-    override func prepare (for segue: UIStoryboardSegue, sender: Any?){
-        switch segue.identifier! {
-        case self.transitionEtud:
-                self.topLabel.text! = "Demande inscription: Etudiants"
-        case self.transitionAdmin:
-                self.topLabel.text! = "Demande inscription: Administration"
-        case self.transitionRespo:
-                self.topLabel.text! = "Demande inscription: Responsable dep."
-        case self.transitionEnseignant:
-                self.topLabel.text! = "Demande inscription: Enseignant"
-        default:
-             alertError(errorMsg: "Problème de groupe", userInfo: "L'application ne reconnaît pas votre groupe")
-            
+        
+        //Check if the id does not already exist
+        if (CoreDataManager.isInCoreDataUser(id: self.identifiant.text!)){
+            DialogBoxHelper.alert(view: self, withTitle: "pb ID", andMessage: "identifiant déjà utilisé")
+        }else{
+            self.saveNewUser()
+            performSegue(withIdentifier: backToConnexion, sender: self)
         }
     }
-        
-    func alertError(errorMsg error: String, userInfo msg:String = ""){
-        let alert = UIAlertController (title: error,
-                                       message: msg,
-                                       preferredStyle:.alert)
-        let cancelAction = UIAlertAction (title :"Ok", style:.default)
-        alert.addAction(cancelAction)
-        present(alert,animated: true)
+    
+    
+    /**Save a new user
+        THE FUNCTION DOES NOT VERIFY ANY PRE CONDITION
+    */
+    private func saveNewUser(){
+
+        let user = Utilisateur(context: CoreDataManager.context)
+        user.identifiant = self.identifiant.text
+        user.nom = self.nom.text
+        user.prenom = self.prenom.text
+        user.mdp = self.mdp.text
+        user.accepter = false
+        CoreDataManager.save()
     }
+    
+
     
     func textFieldShouldReturn ( textField: UITextField) -> Bool {
         textField.resignFirstResponder()

@@ -7,18 +7,18 @@
                 <entry key="key" value="value"/>
             </userInfo>
         </attribute>
-        <relationship name="us" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="groupe" inverseEntity="Utilisateur" syncable="YES"/>
+        <relationship name="utilisateurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="groupe" inverseEntity="Utilisateur" syncable="YES"/>
     </entity>
     <entity name="Utilisateur" representedClassName="Utilisateur" syncable="YES" codeGenerationType="class">
-        <attribute name="accepter" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="mdp" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="groupe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Groupe" inverseName="us" inverseEntity="Groupe" syncable="YES"/>
+        <attribute name="accepter" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="identifiant" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mdp" attributeType="String" syncable="YES"/>
+        <attribute name="nom" attributeType="String" syncable="YES"/>
+        <attribute name="prenom" attributeType="String" syncable="YES"/>
+        <relationship name="groupe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Groupe" inverseName="utilisateurs" inverseEntity="Groupe" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Utilisateur" positionX="378" positionY="105" width="128" height="133"/>
         <element name="Groupe" positionX="612" positionY="99" width="128" height="88"/>
+        <element name="Utilisateur" positionX="378" positionY="105" width="128" height="133"/>
     </elements>
 </model>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C284FE31E5DCA8D0006C13F /* QuiEtesVousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE21E5DCA8D0006C13F /* QuiEtesVousViewController.swift */; };
+		5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE51E5DE2130006C13F /* CoreDataManager.swift */; };
+		5C284FE81E5DE5150006C13F /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */; };
 		5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA7BEB31E543F830013CCDA /* MainViewController.swift */; };
 		5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */; };
 		5CB1E7BD1E51A42200A424AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7BC1E51A42200A424AD /* AppDelegate.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C284FE21E5DCA8D0006C13F /* QuiEtesVousViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuiEtesVousViewController.swift; sourceTree = "<group>"; };
+		5C284FE51E5DE2130006C13F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		5CA7BEB31E543F830013CCDA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ../MainViewController.swift; sourceTree = "<group>"; };
 		5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemandeInscriptionViewController.swift; sourceTree = "<group>"; };
 		5CB1E7B91E51A42200A424AD /* IOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C284FE41E5DE1E00006C13F /* ClassHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5C284FE51E5DE2130006C13F /* CoreDataManager.swift */,
+				5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */,
+			);
+			name = ClassHelper;
+			sourceTree = "<group>";
+		};
 		5CB1E7B01E51A42200A424AD = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +116,7 @@
 		5CB1E7BB1E51A42200A424AD /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				5C284FE41E5DE1E00006C13F /* ClassHelper */,
 				5CA7BEB31E543F830013CCDA /* MainViewController.swift */,
 				5CB1E7BC1E51A42200A424AD /* AppDelegate.swift */,
 				5CB1E7C51E51A42200A424AD /* Main.storyboard */,
@@ -109,6 +125,7 @@
 				5CB1E7CD1E51A42200A424AD /* Info.plist */,
 				5CB1E7BE1E51A42200A424AD /* IOSProject.xcdatamodeld */,
 				5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */,
+				5C284FE21E5DCA8D0006C13F /* QuiEtesVousViewController.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -266,9 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */,
 				5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */,
 				5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */,
+				5C284FE31E5DCA8D0006C13F /* QuiEtesVousViewController.swift in Sources */,
 				5CB1E7BD1E51A42200A424AD /* AppDelegate.swift in Sources */,
+				5C284FE81E5DE5150006C13F /* DialogBoxHelper.swift in Sources */,
 				5CB1E7C01E51A42200A424AD /* IOSProject.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
