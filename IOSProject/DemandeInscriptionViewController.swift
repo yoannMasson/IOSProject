@@ -83,6 +83,9 @@ class DemandeInscriptionViewController: UIViewController {
         user.prenom = self.prenom.text
         user.mdp = self.mdp.text
         user.accepter = false
+        let groupe = Groupe(context: CoreDataManager.context)
+        groupe.nom = etat!
+        user.groupe = groupe
         CoreDataManager.save()
     }
     
