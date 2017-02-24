@@ -54,5 +54,17 @@ class CoreDataManager: NSObject{
         }
         return find
     }
+    
+    class func connect( login: String, password: String) -> Utilisateur? {
+        let users = self.getUsers()
+        var userToReturn : Utilisateur?
+        for user in users {
+            if (user.identifiant == login && password == user.mdp){
+                userToReturn = user
+            }
+        }
+        return userToReturn
+    }
+    
 }
 

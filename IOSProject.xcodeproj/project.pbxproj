@@ -20,6 +20,7 @@
 		5CB1E7CC1E51A42200A424AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB1E7CA1E51A42200A424AD /* LaunchScreen.storyboard */; };
 		5CB1E7D71E51A42200A424AD /* IOSProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7D61E51A42200A424AD /* IOSProjectTests.swift */; };
 		5CB1E7E21E51A42200A424AD /* IOSProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7E11E51A42200A424AD /* IOSProjectUITests.swift */; };
+		5CF158081E609A93008B15CE /* mySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF158071E609A93008B15CE /* mySplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5CB1E7DD1E51A42200A424AD /* IOSProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB1E7E11E51A42200A424AD /* IOSProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSProjectUITests.swift; sourceTree = "<group>"; };
 		5CB1E7E31E51A42200A424AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF158071E609A93008B15CE /* mySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mySplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				5CB1E7BE1E51A42200A424AD /* IOSProject.xcdatamodeld */,
 				5CA7BEB81E5448180013CCDA /* DemandeInscriptionViewController.swift */,
 				5C284FE21E5DCA8D0006C13F /* QuiEtesVousViewController.swift */,
+				5CF158071E609A93008B15CE /* mySplitViewController.swift */,
 			);
 			path = IOSProject;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */,
 				5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */,
+				5CF158081E609A93008B15CE /* mySplitViewController.swift in Sources */,
 				5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */,
 				5C2CDA881E60696600CDD0DC /* Connexion.swift in Sources */,
 				5C284FE31E5DCA8D0006C13F /* QuiEtesVousViewController.swift in Sources */,

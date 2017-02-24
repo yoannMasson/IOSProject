@@ -16,10 +16,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var textFieldMdp: UITextField!
     @IBOutlet weak var id: UILabel!
     
-    @IBAction func change(_ sender: Any) {
-
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,13 +31,25 @@ class MainViewController: UIViewController {
         return true
     }
     
-    /*
-    // MARK: - Navigation
+    @IBAction func seConnecter(_ sender: Any) {
+        
+        //Testing id required
+        guard let testid = self.textFieldId.text, testid != "" else{
+            DialogBoxHelper.alert(view:self,withTitle: "Problème d'Id", andMessage: "Il faut renseigner l'identifiant qui vous permettra de vous connecter")
+            return
+        }
+        
+        //Testing password required
+        guard let testmdp = self.textFieldMdp.text, testmdp != "" else{
+            DialogBoxHelper.alert(view:self,withTitle: "Problème de mdp", andMessage: "Il faut renseigner le mot de passe qui vous permettra de vous connecter")
+            return
+        }
+        
+        //testing if the user is real
+        if Connexion.getConnexion(login: textFieldId.text!, password: textFieldMdp.text!) != nil {
+            performSegue(withIdentifier: "Connexion", sender: self)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
 }

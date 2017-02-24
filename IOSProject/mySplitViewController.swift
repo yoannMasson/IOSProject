@@ -9,6 +9,8 @@
 import UIKit
 
 class mySplitViewController: UISplitViewController {
+    
+    var utilisateur : Utilisateur?
 
     override func viewDidLoad() {
         super.viewDidLoad()

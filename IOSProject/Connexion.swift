@@ -11,9 +11,15 @@ import CoreData
 
 class Connexion {
     
-    var user: Utilisateur
+    private static var user: Utilisateur?
     
-    private init (user: Utilisateur){
-        self.user = user
+    class func getUser() -> Utilisateur? {
+        return self.user
     }
+    
+    class func getConnexion(login: String, password: String) -> Utilisateur?{
+        self.user = CoreDataManager.connect(login: login, password: password)
+        return self.user
+    }
+    
 }
