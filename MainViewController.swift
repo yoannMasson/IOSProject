@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate, UIApplicationDelegate{
 
     
     @IBOutlet weak var textFieldId: UITextField!
     @IBOutlet weak var textFieldMdp: UITextField!
     @IBOutlet weak var id: UILabel!
+    
+    let connexionSegue = "Connexion"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +49,17 @@ class MainViewController: UIViewController {
         
         //testing if the user is real
         if Connexion.getConnexion(login: textFieldId.text!, password: textFieldMdp.text!) != nil {
-            performSegue(withIdentifier: "Connexion", sender: self)
+            performSegue(withIdentifier: connexionSegue, sender: self)
+        }else{
+            DialogBoxHelper.alert(view: self, withTitle: "Pas de compte",andMessage:"Mauvais mot de passe ou mail")
         }
 
+    }
+    
+    // MARK: -- TextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }
