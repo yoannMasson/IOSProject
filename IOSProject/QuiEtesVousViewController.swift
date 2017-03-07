@@ -49,7 +49,7 @@ class QuiEtesVousViewController: UIViewController {
             demandeInscriptionViewController.etat = "Administration"
         case self.transitionRespo:
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
-            demandeInscriptionViewController.etat = "Responsable dep."
+            demandeInscriptionViewController.etat = "Responsable departement"
         case self.transitionEnseignant:
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
             demandeInscriptionViewController.etat = "Enseignant"
