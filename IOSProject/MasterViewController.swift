@@ -11,8 +11,15 @@ import CoreData
 
 class MasterViewController: UITableViewController {
     
+    // MARK: - Segue declaration
+    let toMessage = "toMessage"
+    let toDocument = "toDocument"
+    let toCalendar = "toCalendar"
+    let toOption = "toOption"
+    let toAdmin = "toAdmin"
     var menus = ["Message","Documents","Calendrier","Options"]
 
+    // MARK: - Table view init
     override func viewDidLoad() {
         super.viewDidLoad()
         if(CoreDataManager.isAdmin()){
@@ -33,34 +40,40 @@ class MasterViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return menus.count
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return menus.count
+    }
 
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        
-//        let menu = self.menus[indexPath.row]
-//        cell.textLabel?.text = menu
-//
-//        return cell
-//    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    
+        let menu = self.menus[indexPath.row]
+        cell.textLabel?.text = menu
+
+        return cell
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
         case 0:
             self.performSegue(withIdentifier: "toMessage", sender: self)
         case 1:
-            self.performSegue(withIdentifier: "toHello", sender: self)
+            self.performSegue(withIdentifier: "toDocument", sender: self)
+        case 2:
+            self.performSegue(withIdentifier: "toCalendar", sender: self)
+        case 3:
+            self.performSegue(withIdentifier: "toOption", sender: self)
+        case 4:
+            self.performSegue(withIdentifier: "toAdmin", sender: self)
         default:
-            self.performSegue(withIdentifier: "toMessage", sender: self)
+            DialogBoxHelper.alert(view: self, withTitle: "oulalal", andMessage: "erreur inconnu")
         }
     }
 
