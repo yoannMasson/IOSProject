@@ -6,100 +6,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IOSProject/DemandeInscriptionViewController.swift"
-            timestampString = "509466688.8161"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "DemandeInscriptionViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; IOSProject.DemandeInscriptionViewController"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569381.824913"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; IOSProject.DemandeInscriptionViewController"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569381.82648"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;IOSProject.DemandeInscriptionViewController&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569381.828027"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;IOSProject.DemandeInscriptionViewController&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569381.829443"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IOSProject/DemandeInscriptionViewController.swift"
-            timestampString = "509473356.650755"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "valider(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -116,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOSProject/CoreDataManager.swift"
-            timestampString = "510566634.990626"
+            timestampString = "510753296.780286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "connect(login:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,15 +38,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOSProject/CoreDataManager.swift"
-            timestampString = "510566634.990626"
+            timestampString = "510753296.780286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "connect(login:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -164,15 +70,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOSProject/CoreDataManager.swift"
-            timestampString = "510569380.763897"
+            timestampString = "510753296.780286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "isAdmin()"
             landmarkType = "7">
          </BreakpointContent>
@@ -199,76 +105,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IOSProject/DemandeInscriptionViewController.swift"
-            timestampString = "510569403.727726"
+            filePath = "IOSProject/MessageTableViewController.swift"
+            timestampString = "510751710.703787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "DemandeInscriptionViewController"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOSProject/NouveauMessageViewController.swift"
+            timestampString = "510747040.034845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "NouveauMessageViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.nom.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569403.735691"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.nom.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569403.73718"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; IOSProject.DemandeInscriptionViewController"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569403.738993"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "176">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;IOSProject.DemandeInscriptionViewController&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569403.740596"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "101">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -277,76 +137,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IOSProject/DemandeInscriptionViewController.swift"
-            timestampString = "510569409.271887"
+            filePath = "IOSProject/CoreDataManager.swift"
+            timestampString = "510753296.780286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "DemandeInscriptionViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.identifiant.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569409.276059"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "27">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.identifiant.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569409.277574"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "42">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; IOSProject.DemandeInscriptionViewController"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569409.279389"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IOSProject.DemandeInscriptionViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;IOSProject.DemandeInscriptionViewController&gt;"
-                  moduleName = "IOSProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yoann.masson/Desktop/IOSProject/IOSProject/DemandeInscriptionViewController.swift"
-                  timestampString = "510569409.280743"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "saveNewUser(identifiant:nom:prenom:mdp:userGroupe:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

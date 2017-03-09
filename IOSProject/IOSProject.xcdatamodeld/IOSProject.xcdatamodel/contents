@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Groupe" representedClassName="Groupe" syncable="YES" codeGenerationType="class">
-        <attribute name="descriptionDroits" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nom" transient="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="key" value="value"/>
@@ -11,14 +10,15 @@
         <relationship name="utilisateurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="groupe" inverseEntity="Utilisateur" syncable="YES"/>
     </entity>
     <entity name="Message" representedClassName="Message" syncable="YES" codeGenerationType="class">
-        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="auteur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="messages" inverseEntity="Utilisateur" syncable="YES"/>
-        <relationship name="destinataire" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Groupe" inverseName="messages" inverseEntity="Groupe" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="message" attributeType="String" syncable="YES"/>
+        <attribute name="titre" attributeType="String" syncable="YES"/>
+        <relationship name="auteur" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="messages" inverseEntity="Utilisateur" syncable="YES"/>
+        <relationship name="destinataire" toMany="YES" deletionRule="Nullify" destinationEntity="Groupe" inverseName="messages" inverseEntity="Groupe" syncable="YES"/>
     </entity>
     <entity name="Utilisateur" representedClassName="Utilisateur" syncable="YES" codeGenerationType="class">
         <attribute name="accepter" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="identifiant" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mail" transient="YES" attributeType="String" syncable="YES"/>
         <attribute name="mdp" attributeType="String" syncable="YES"/>
         <attribute name="nom" attributeType="String" syncable="YES"/>
         <attribute name="prenom" attributeType="String" syncable="YES"/>
@@ -26,8 +26,8 @@
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="auteur" inverseEntity="Message" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Groupe" positionX="682" positionY="135" width="128" height="103"/>
+        <element name="Groupe" positionX="682" positionY="135" width="128" height="88"/>
+        <element name="Message" positionX="421" positionY="-135" width="128" height="118"/>
         <element name="Utilisateur" positionX="261" positionY="108" width="128" height="148"/>
-        <element name="Message" positionX="394" positionY="-130" width="128" height="103"/>
     </elements>
 </model>

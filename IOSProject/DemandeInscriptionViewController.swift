@@ -66,28 +66,11 @@ class DemandeInscriptionViewController: UIViewController {
         if (CoreDataManager.isInCoreDataUser(id: self.identifiant.text!)){
             DialogBoxHelper.alert(view: self, withTitle: "pb ID", andMessage: "identifiant déjà utilisé")
         }else{
-            self.saveNewUser()
+            CoreDataManager.saveNewUser(identifiant: self.identifiant.text!, nom: self.nom.text!, prenom: self.prenom.text!, mdp: self.mdp.text!, userGroupe: etat! )
             performSegue(withIdentifier: backToConnexion, sender: self)
         }
     }
     
-    
-    /**Save a new user
-        THE FUNCTION DOES NOT VERIFY ANY PRE CONDITION
-    */
-    private func saveNewUser(){
-
-        let user = Utilisateur(context: CoreDataManager.context)
-        user.identifiant = self.identifiant.text
-        user.nom = self.nom.text
-        user.prenom = self.prenom.text
-        user.mdp = self.mdp.text
-        user.accepter = false
-        let groupe = Groupe(context: CoreDataManager.context)
-        groupe.nom = etat!
-        user.groupe = groupe
-        CoreDataManager.save()
-    }
     
 
     

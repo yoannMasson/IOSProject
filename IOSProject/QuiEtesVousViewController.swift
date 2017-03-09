@@ -43,16 +43,16 @@ class QuiEtesVousViewController: UIViewController {
         switch segue.identifier! {
         case self.transitionEtud:
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
-            demandeInscriptionViewController.etat = "Etudiants"
+            demandeInscriptionViewController.etat = GroupeName.etud
         case self.transitionAdmin:
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
-            demandeInscriptionViewController.etat = "Administration"
+            demandeInscriptionViewController.etat = GroupeName.administration
         case self.transitionRespo:
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
-            demandeInscriptionViewController.etat = "Responsable departement"
+            demandeInscriptionViewController.etat = GroupeName.respo
         case self.transitionEnseignant:
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
-            demandeInscriptionViewController.etat = "Enseignant"
+            demandeInscriptionViewController.etat = GroupeName.prof
         default:
             self.alertError(errorMsg: "Problème de groupe", userInfo: "L'application ne reconnaît pas votre groupe")
         }

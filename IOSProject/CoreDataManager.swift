@@ -48,6 +48,29 @@ class CoreDataManager: NSObject{
         }
     }
     
+    
+    /// Save a new user
+    ///
+    /// - Parameters:
+    ///      -id: the id of the new user
+    ///      -nom: the name of the new user
+    ///      -prenom: the first name of the new user
+    ///      -mdp: the password of the new user
+    ///      -userGroupe: the groupe of the new user
+    class public func saveNewUser(identifiant: String, nom: String, prenom: String, mdp: String, userGroupe: String ){
+        
+        let user = Utilisateur(context: CoreDataManager.context)
+        user.mail = identifiant
+        user.nom = nom
+        user.prenom = prenom
+        user.mdp = mdp
+        user.accepter = false
+        let groupe = Groupe(context: CoreDataManager.context)
+        groupe.nom = userGroupe
+        user.groupe = groupe
+        CoreDataManager.save()
+    }
+    
     /// Check if the user is in the database
     ///
     /// - Parameters:
@@ -55,8 +78,8 @@ class CoreDataManager: NSObject{
     class func isInCoreDataUser (id: String) -> Bool{
         let users = self.getUsers()
         var find = false
-        for users in users {
-            if (users.identifiant == id){
+        for user in users {
+            if (user.mail == id){
                 find = true
             }
         }
@@ -67,12 +90,12 @@ class CoreDataManager: NSObject{
     ///
     /// - Parameters:
     ///     -login: the mail of the user
-    ///      -password: password of the user
+    ///     -password: password of the user
     class func connect( login: String, password: String) -> Utilisateur? {
         let users = self.getUsers()
         var userToReturn : Utilisateur?
         for user in users {
-            if (user.identifiant == login && password == user.mdp){
+            if (user.mail == login && password == user.mdp){
                 userToReturn = user
             }
         }
@@ -114,6 +137,15 @@ class CoreDataManager: NSObject{
         catch _ as NSError{
             exit(EXIT_FAILURE)
         }
+    }
+    
+    class func sendMessage(view: UIViewController,title: String, userMessage: String, users: NSSet){
+        let message = Message(context: CoreDataManager.context)
+        message.auteur?.mail = Connexion.getUser()?.mail
+        message.destinataire = users
+        message.message = userMessage
+        message.titre = title
+        CoreDataManager.save()
     }
 }
 
