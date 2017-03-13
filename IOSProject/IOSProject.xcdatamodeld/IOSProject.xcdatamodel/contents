@@ -18,7 +18,7 @@
     </entity>
     <entity name="Utilisateur" representedClassName="Utilisateur" syncable="YES" codeGenerationType="class">
         <attribute name="accepter" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="mail" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mail" attributeType="String" syncable="YES"/>
         <attribute name="mdp" attributeType="String" syncable="YES"/>
         <attribute name="nom" attributeType="String" syncable="YES"/>
         <attribute name="prenom" attributeType="String" syncable="YES"/>
@@ -28,6 +28,6 @@
     <elements>
         <element name="Groupe" positionX="682" positionY="135" width="128" height="88"/>
         <element name="Message" positionX="421" positionY="-135" width="128" height="118"/>
-        <element name="Utilisateur" positionX="261" positionY="108" width="128" height="148"/>
+        <element name="Utilisateur" positionX="261" positionY="108" width="128" height="150"/>
     </elements>
 </model>
