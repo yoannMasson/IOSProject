@@ -65,7 +65,7 @@ class CoreDataManager: NSObject{
         user.prenom = prenom
         user.mdp = mdp
         user.accepter = false
-        let groupe = Groupe(context: CoreDataManager.context)
+        let groupe = getGroupe(name: userGroupe)
         groupe.nom = userGroupe
         user.groupe = groupe
         CoreDataManager.save()
@@ -107,7 +107,7 @@ class CoreDataManager: NSObject{
         guard let user = Connexion.getUser() else {
            return false
         }
-        return user.groupe!.nom == "Responsable departement" || user.groupe!.nom == "Administration"
+        return user.groupe!.nom == GroupeName.administration || user.groupe!.nom == GroupeName.respo
     }
     
     // MARK: -- Messages functions
@@ -147,5 +147,31 @@ class CoreDataManager: NSObject{
         message.titre = title
         CoreDataManager.save()
     }
+    
+    // MARK: -- Group functions
+    
+    class func getGroupe( name: String) -> Groupe {
+        let request : NSFetchRequest<Groupe> = Groupe.fetchRequest()
+        var groupeToReturn : Groupe?
+        do{
+            let groupes = try context.fetch(request)
+            for groupe in groupes {
+                if (groupe.nom == name){
+                    groupeToReturn = groupe
+                }
+            }
+            if (groupeToReturn == nil ){
+                groupeToReturn = Groupe (context: CoreDataManager.context)
+                groupeToReturn!.nom = name
+                CoreDataManager.save()
+            }
+            
+            return groupeToReturn!
+        }
+        catch _ as NSError{
+            exit(EXIT_FAILURE)
+        }
+    }
+
 }
 

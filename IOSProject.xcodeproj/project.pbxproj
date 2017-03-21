@@ -12,6 +12,7 @@
 		5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE51E5DE2130006C13F /* CoreDataManager.swift */; };
 		5C284FE81E5DE5150006C13F /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */; };
 		5C2CDA881E60696600CDD0DC /* Connexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CDA871E60696600CDD0DC /* Connexion.swift */; };
+		5C695D751E8120D400C501AB /* myMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C695D741E8120D400C501AB /* myMenuTableViewCell.swift */; };
 		5C8E220F1E7153A80018A95E /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E220E1E7153A80018A95E /* MessageTableViewController.swift */; };
 		5C8E22111E7155F80018A95E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E22101E7155F80018A95E /* MessageTableViewCell.swift */; };
 		5C94A2491E71613400393E54 /* NouveauMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C94A2481E71613400393E54 /* NouveauMessageViewController.swift */; };
@@ -51,6 +52,7 @@
 		5C284FE51E5DE2130006C13F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		5C2CDA871E60696600CDD0DC /* Connexion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connexion.swift; sourceTree = "<group>"; };
+		5C695D741E8120D400C501AB /* myMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMenuTableViewCell.swift; sourceTree = "<group>"; };
 		5C8E220E1E7153A80018A95E /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		5C8E22101E7155F80018A95E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		5C94A2481E71613400393E54 /* NouveauMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NouveauMessageViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,15 @@
 			name = ClassHelper;
 			sourceTree = "<group>";
 		};
+		5C695D731E81209100C501AB /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5C1B01DC1E6E965200ADFC95 /* MasterViewController.swift */,
+				5C695D741E8120D400C501AB /* myMenuTableViewCell.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		5C8E220C1E7152320018A95E /* Message */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,13 +162,13 @@
 		5CB1E7BB1E51A42200A424AD /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				5C695D731E81209100C501AB /* Menu */,
 				5C8E220D1E7152450018A95E /* Inscription */,
 				5C8E220C1E7152320018A95E /* Message */,
 				5C284FE41E5DE1E00006C13F /* ClassHelper */,
 				5CA7BEB31E543F830013CCDA /* MainViewController.swift */,
 				5CB1E7BC1E51A42200A424AD /* AppDelegate.swift */,
 				5CB1E7C51E51A42200A424AD /* Main.storyboard */,
-				5C1B01DC1E6E965200ADFC95 /* MasterViewController.swift */,
 				5CB1E7C81E51A42200A424AD /* Assets.xcassets */,
 				5CB1E7CA1E51A42200A424AD /* LaunchScreen.storyboard */,
 				5CB1E7CD1E51A42200A424AD /* Info.plist */,
@@ -323,6 +334,7 @@
 				5C1B01DD1E6E965200ADFC95 /* MasterViewController.swift in Sources */,
 				5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */,
 				5C8E220F1E7153A80018A95E /* MessageTableViewController.swift in Sources */,
+				5C695D751E8120D400C501AB /* myMenuTableViewCell.swift in Sources */,
 				5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */,
 				5C94A24B1E71728900393E54 /* GroupeName.swift in Sources */,
 				5C94A2491E71613400393E54 /* NouveauMessageViewController.swift in Sources */,

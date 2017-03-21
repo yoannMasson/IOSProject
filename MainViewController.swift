@@ -16,7 +16,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, UIApplicationDe
     @IBOutlet weak var textFieldMdp: UITextField!
     @IBOutlet weak var id: UILabel!
     
-    let connexionSegue = "Connexion"
+    let toMenu = "toMenu"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,6 @@ class MainViewController: UIViewController, UITextFieldDelegate, UIApplicationDe
         // Dispose of an resources that can be recreated.
     }
 
-    func textFieldShouldReturn ( textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
     
     @IBAction func seConnecter(_ sender: Any) {
         
@@ -49,7 +45,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, UIApplicationDe
         
         //testing if the user is real
         if Connexion.getConnexion(login: textFieldId.text!, password: textFieldMdp.text!) != nil {
-            performSegue(withIdentifier: connexionSegue, sender: self)
+            performSegue(withIdentifier: toMenu, sender: self)
         }else{
             DialogBoxHelper.alert(view: self, withTitle: "Pas de compte",andMessage:"Mauvais mot de passe ou mail")
         }

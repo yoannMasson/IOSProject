@@ -12,5 +12,5 @@ class GroupeName {
     public static let etud = "Etudiant"
     public static let prof = "Professeur"
     public static let administration = "Administration"
-    public static let respo = "Responsable"
+    public static let respo = "Responsable Departement"
 }

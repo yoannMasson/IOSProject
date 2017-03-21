@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MainViewController.swift"
-            timestampString = "510154184.359629"
+            timestampString = "511779959.393449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "seConnecter(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -102,22 +102,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IOSProject/MessageTableViewController.swift"
-            timestampString = "510751710.703787"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -138,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOSProject/CoreDataManager.swift"
-            timestampString = "510753296.780286"
+            timestampString = "511778633.036901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "saveNewUser(identifiant:nom:prenom:mdp:userGroupe:)"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "getGroupe(name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
