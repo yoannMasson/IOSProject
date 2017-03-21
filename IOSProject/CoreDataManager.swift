@@ -66,7 +66,6 @@ class CoreDataManager: NSObject{
         user.mdp = mdp
         user.accepter = false
         let groupe = getGroupe(name: userGroupe)
-        groupe.nom = userGroupe
         user.groupe = groupe
         CoreDataManager.save()
     }
@@ -126,9 +125,9 @@ class CoreDataManager: NSObject{
         do{
             let messages = try context.fetch(request)
             for message in messages{
-                if(message.destinataire == user.groupe){
+                if(message.destinataire!.contains(user.groupe)){
                     messagesToReturn.append(message)
-                }
+               }
             }
             return messagesToReturn;
             
@@ -139,12 +138,31 @@ class CoreDataManager: NSObject{
         }
     }
     
-    class func sendMessage(view: UIViewController,title: String, userMessage: String, users: NSSet){
+    class func sendMessage(view: UIViewController,title: String, userMessage: String, etud: Bool, prof: Bool, admin: Bool, respo: Bool){
         let message = Message(context: CoreDataManager.context)
-        message.auteur?.mail = Connexion.getUser()?.mail
-        message.destinataire = users
+        if(etud){
+            message.addToDestinataire(CoreDataManager.getGroupe(name: GroupeName.etud))
+        }
+        if(prof){
+            message.addToDestinataire(CoreDataManager.getGroupe(name: GroupeName.prof))
+        }
+        if(admin){
+            message.addToDestinataire(CoreDataManager.getGroupe(name: GroupeName.administration))
+        }
+        if(respo){
+            message.addToDestinataire(CoreDataManager.getGroupe(name: GroupeName.respo))
+        }
+        
+        guard message.destinataire?.count != 0 else{
+            DialogBoxHelper.alert(view: view, withTitle: "Problème de destinataire", andMessage:"Il faut renseigner au moins un groupe de destinataire")
+            return
+        }
+        
+        message.auteur = Connexion.getUser()
         message.message = userMessage
         message.titre = title
+        print(message.destinataire)
+        
         CoreDataManager.save()
     }
     

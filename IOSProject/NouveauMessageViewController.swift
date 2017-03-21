@@ -10,8 +10,9 @@ import UIKit
 
 class NouveauMessageViewController: UIViewController {
 
-    @IBOutlet var messagetitle: UITextField!
-    @IBOutlet var message: UITextView!
+
+    @IBOutlet weak var messageTitle: UITextField!
+    @IBOutlet weak var message: UITextView!
     @IBOutlet weak var etud: UISwitch!
     @IBOutlet weak var prof: UISwitch!
     @IBOutlet weak var admin: UISwitch!
@@ -34,24 +35,20 @@ class NouveauMessageViewController: UIViewController {
     // MARK: - Navigation
 
      @IBAction func sendMessage(_ sender: Any) {
-        let usersToSend = NSSet()
-        if(etud.isOn){
-            usersToSend.setValue(CoreDataManager.getGroupe(name: GroupeName.etud), forKey: GroupeName.etud)
-        }
-        if(prof.isOn){
-            usersToSend.adding(CoreDataManager.getGroupe(name: GroupeName.prof))
-        }
-        if(admin.isOn){
-            usersToSend.adding(CoreDataManager.getGroupe(name: GroupeName.administration))
-        }
-        if(respo.isOn){
-            usersToSend.adding(CoreDataManager.getGroupe(name: GroupeName.respo))
-        }
+        
 
-        guard usersToSend.count != 0 else{
-            DialogBoxHelper.alert(view: self, withTitle: "Problème de destinataire", andMessage:"Il faut renseigner au moins un groupe de destinataire")
+        guard let messagetoSend = self.message.text,messagetoSend != "" else{
+            DialogBoxHelper.alert(view: self, withTitle: "Pas de corps", andMessage:"Ilvous faut mettre un corps à votre message")
             return
         }
+        
+        guard let messageTitleToSend = self.messageTitle.text, messageTitleToSend != "" else{
+            DialogBoxHelper.alert(view: self, withTitle: "Pas de titre", andMessage:"Il vous faut mettre un titre à votre message")
+            return
+        }
+        
+        CoreDataManager.sendMessage(view: self, title: messageTitleToSend, userMessage: messagetoSend, etud:etud.isOn, prof:prof.isOn, admin:admin.isOn, respo:respo.isOn)
+        
         
      }
     /*

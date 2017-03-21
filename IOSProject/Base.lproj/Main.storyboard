@@ -77,6 +77,10 @@
                                     <segue destination="5kD-jT-gah" kind="show" id="QNB-dQ-Jxc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtg-A3-Qyv">
+                                <rect key="frame" x="392" y="64" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -373,7 +377,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yzb-pH-JB0">
-                            <rect key="frame" x="0.0" y="162" width="703" height="44"/>
+                            <rect key="frame" x="0.0" y="162" width="703.5" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <state key="normal" title="Envoyer un message"/>
@@ -382,7 +386,7 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="OAN-bI-N07" customClass="MessageTableViewCell" customModule="IOSProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="134" id="OAN-bI-N07" customClass="MessageTableViewCell" customModule="IOSProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="703" height="134"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OAN-bI-N07" id="yxp-XC-nYw">
@@ -390,7 +394,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-ea-ydr">
-                                            <rect key="frame" x="8" y="29" width="1008" height="21"/>
+                                            <rect key="frame" x="8" y="29" width="687" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="RaI-he-KJz"/>
                                             </constraints>
@@ -399,13 +403,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-67-L5k">
-                                            <rect key="frame" x="0.0" y="58" width="1024" height="75"/>
+                                            <rect key="frame" x="0.0" y="58" width="703" height="75"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQX-H1-Wfu">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="21"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="55v-t1-c3h"/>
                                                 <constraint firstAttribute="height" constant="21" id="EIx-lB-YnY"/>
@@ -429,9 +433,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="author" destination="fG8-ea-ydr" id="Nli-67-mkZ"/>
-                                    <outlet property="message" destination="qXl-67-L5k" id="fsu-dS-TjL"/>
-                                    <outlet property="title" destination="RQX-H1-Wfu" id="Ypz-Eo-gIF"/>
+                                    <outlet property="author" destination="fG8-ea-ydr" id="hkf-Nx-hJ7"/>
+                                    <outlet property="message" destination="qXl-67-L5k" id="D52-EW-o8P"/>
+                                    <outlet property="title" destination="RQX-H1-Wfu" id="vCN-Sf-GIn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -503,7 +507,7 @@
                                 </constraints>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-OR-BI0">
-                                <rect key="frame" x="432" y="657" width="51" height="31"/>
+                                <rect key="frame" x="432.5" y="657" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="Tc1-I6-GfA"/>
                                     <constraint firstAttribute="height" constant="31" id="qIe-4K-nAQ"/>
@@ -516,7 +520,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONq-gz-HFg">
-                                <rect key="frame" x="386" y="636" width="141" height="21"/>
+                                <rect key="frame" x="386.5" y="636" width="141" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4Kk-Zi-elQ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="141" id="ZVE-5C-pa1"/>
@@ -592,6 +596,8 @@
                     <connections>
                         <outlet property="admin" destination="1oQ-OR-BI0" id="GRN-D1-cX0"/>
                         <outlet property="etud" destination="6f0-MH-roJ" id="u2q-BO-Kon"/>
+                        <outlet property="message" destination="zJ1-d5-gE3" id="EdF-0D-iGe"/>
+                        <outlet property="messageTitle" destination="5v4-Gj-3U3" id="pGy-pG-63z"/>
                         <outlet property="prof" destination="meL-gE-7Qg" id="MnK-5e-OxH"/>
                         <outlet property="respo" destination="EgK-cL-PhL" id="sZ7-sY-F4s"/>
                         <outlet property="title" destination="5v4-Gj-3U3" id="un2-Lc-OAO"/>
@@ -733,7 +739,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HtD-27-SPR"/>
+        <segue reference="2g6-ZA-FE5"/>
         <segue reference="rfj-TC-2Hl"/>
     </inferredMetricsTieBreakers>
 </document>

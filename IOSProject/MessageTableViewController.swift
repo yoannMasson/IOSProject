@@ -14,19 +14,8 @@ class MessageTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        messages = CoreDataManager.getMessage(view: self)
         
-        /**Testing message display */
-        let users = NSSet()
-        let groupe = Groupe(context: CoreDataManager.context)
-        groupe.nom = GroupeName.etud
-        users.adding(groupe)
-        CoreDataManager.sendMessage(view: self, title: "testTitre", userMessage: "lolilol le message aaaaaaaaaaaaaaaaaaaabbbbbbbzhebhzebhzbehzabehzbhzaebaaaaa FIN", users: users)
-        
-        guard Connexion.getUser() != nil else {
-            DialogBoxHelper.alert(view: self, withTitle: "pas de user", andMessage: "Vous n'êtes pas connecté")
-            return
-        }
-        self.messages = CoreDataManager.getMessage(view: self)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,7 +42,7 @@ class MessageTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! MessageTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MessageTableViewCell
 
         cell.setTitle(title: self.messages[indexPath.row].titre!)
         cell.setAuthor(author: (self.messages[indexPath.row].auteur?.nom)!+" "+(self.messages[indexPath.row].auteur?.prenom)!)

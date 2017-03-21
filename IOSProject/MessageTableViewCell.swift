@@ -12,9 +12,11 @@ class MessageTableViewCell: UITableViewCell {
     
     // MARK: -- Message
     
+
+    
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var author: UILabel!
     @IBOutlet weak var message: UILabel!
+    @IBOutlet weak var author: UILabel!
     
     func setTitle(title: String){
         self.title.text = title

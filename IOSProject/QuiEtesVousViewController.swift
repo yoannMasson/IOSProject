@@ -27,16 +27,6 @@ class QuiEtesVousViewController: UIViewController {
     }
     
 
-    func alertError(errorMsg error: String, userInfo msg:String = ""){
-        let alert = UIAlertController (title: error,
-                                       message: msg,
-                                       preferredStyle:.alert)
-        let cancelAction = UIAlertAction (title :"Ok", style:.default)
-        alert.addAction(cancelAction)
-        present(alert,animated: true)
-    }
-
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +44,7 @@ class QuiEtesVousViewController: UIViewController {
             let demandeInscriptionViewController = segue.destination as! DemandeInscriptionViewController
             demandeInscriptionViewController.etat = GroupeName.prof
         default:
-            self.alertError(errorMsg: "Problème de groupe", userInfo: "L'application ne reconnaît pas votre groupe")
+            DialogBoxHelper.alert(view:self,withTitle:"groupe non reconnu",andMessage:"groupe non reconnu")
         }
         
     }
