@@ -31,6 +31,7 @@ class DemandeInscriptionViewController: UIViewController {
         }else{
             self.topLabel.text = "groupe non reconnu"
         }
+        
     }
 
     override func didReceiveMemoryWarning() {

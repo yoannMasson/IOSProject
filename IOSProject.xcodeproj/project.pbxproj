@@ -26,6 +26,9 @@
 		5CB1E7CC1E51A42200A424AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CB1E7CA1E51A42200A424AD /* LaunchScreen.storyboard */; };
 		5CB1E7D71E51A42200A424AD /* IOSProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7D61E51A42200A424AD /* IOSProjectTests.swift */; };
 		5CB1E7E21E51A42200A424AD /* IOSProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB1E7E11E51A42200A424AD /* IOSProjectUITests.swift */; };
+		5CC1551E1E82B0B200003B35 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1551D1E82B0B200003B35 /* ColorViewController.swift */; };
+		5CC155201E82B21C00003B35 /* colorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1551F1E82B21C00003B35 /* colorPickerViewController.swift */; };
+		5CC155231E82BBD800003B35 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC155221E82BBD800003B35 /* AdminViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		5CB1E7DD1E51A42200A424AD /* IOSProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB1E7E11E51A42200A424AD /* IOSProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSProjectUITests.swift; sourceTree = "<group>"; };
 		5CB1E7E31E51A42200A424AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC1551D1E82B0B200003B35 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		5CC1551F1E82B21C00003B35 /* colorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorPickerViewController.swift; sourceTree = "<group>"; };
+		5CC155221E82BBD800003B35 /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		5C284FE41E5DE1E00006C13F /* ClassHelper */ = {
 			isa = PBXGroup;
 			children = (
+				5CC1551D1E82B0B200003B35 /* ColorViewController.swift */,
 				5C284FE51E5DE2130006C13F /* CoreDataManager.swift */,
 				5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */,
 				5C2CDA871E60696600CDD0DC /* Connexion.swift */,
@@ -114,6 +121,7 @@
 			children = (
 				5C1B01DC1E6E965200ADFC95 /* MasterViewController.swift */,
 				5C695D741E8120D400C501AB /* myMenuTableViewCell.swift */,
+				5CC1551F1E82B21C00003B35 /* colorPickerViewController.swift */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 		5CB1E7BB1E51A42200A424AD /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				5CC155211E82BB7600003B35 /* Admin */,
 				5C695D731E81209100C501AB /* Menu */,
 				5C8E220D1E7152450018A95E /* Inscription */,
 				5C8E220C1E7152320018A95E /* Message */,
@@ -191,6 +200,14 @@
 				5CB1E7E31E51A42200A424AD /* Info.plist */,
 			);
 			path = IOSProjectUITests;
+			sourceTree = "<group>";
+		};
+		5CC155211E82BB7600003B35 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				5CC155221E82BBD800003B35 /* AdminViewController.swift */,
+			);
+			name = Admin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +278,7 @@
 				TargetAttributes = {
 					5CB1E7B81E51A42200A424AD = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = XN98JZ5648;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -328,13 +346,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC1551E1E82B0B200003B35 /* ColorViewController.swift in Sources */,
 				5C1B01DD1E6E965200ADFC95 /* MasterViewController.swift in Sources */,
 				5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */,
 				5C8E220F1E7153A80018A95E /* MessageTableViewController.swift in Sources */,
 				5C695D751E8120D400C501AB /* myMenuTableViewCell.swift in Sources */,
 				5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */,
+				5CC155201E82B21C00003B35 /* colorPickerViewController.swift in Sources */,
 				5C94A24B1E71728900393E54 /* GroupeName.swift in Sources */,
 				5C94A2491E71613400393E54 /* NouveauMessageViewController.swift in Sources */,
+				5CC155231E82BBD800003B35 /* AdminViewController.swift in Sources */,
 				5C8E22111E7155F80018A95E /* MessageTableViewCell.swift in Sources */,
 				5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */,
 				5C2CDA881E60696600CDD0DC /* Connexion.swift in Sources */,
@@ -494,6 +515,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = XN98JZ5648;
 				INFOPLIST_FILE = IOSProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "polytech-Masson.IOSProject";
@@ -508,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = XN98JZ5648;
 				INFOPLIST_FILE = IOSProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "polytech-Masson.IOSProject";

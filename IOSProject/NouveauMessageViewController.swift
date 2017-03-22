@@ -33,10 +33,10 @@ class NouveauMessageViewController: UIViewController {
 
     
     // MARK: - Navigation
-
-     @IBAction func sendMessage(_ sender: Any) {
+    
+    @IBAction func sendMessage(_ sender: Any) {
         
-
+        
         guard let messagetoSend = self.message.text,messagetoSend != "" else{
             DialogBoxHelper.alert(view: self, withTitle: "Pas de corps", andMessage:"Ilvous faut mettre un corps à votre message")
             return
@@ -50,7 +50,9 @@ class NouveauMessageViewController: UIViewController {
         CoreDataManager.sendMessage(view: self, title: messageTitleToSend, userMessage: messagetoSend, etud:etud.isOn, prof:prof.isOn, admin:admin.isOn, respo:respo.isOn)
         
         
-     }
+        
+    }
+
     /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

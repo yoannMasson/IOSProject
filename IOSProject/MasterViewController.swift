@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController,ColorViewController{
     
     // MARK: - Segue declaration
     let toMessage = "toMessage"

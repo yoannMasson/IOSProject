@@ -44,10 +44,15 @@ class MainViewController: UIViewController, UITextFieldDelegate, UIApplicationDe
         }
         
         //testing if the user is real
-        if Connexion.getConnexion(login: textFieldId.text!, password: textFieldMdp.text!) != nil {
+        guard let user = Connexion.getConnexion(login: textFieldId.text!, password: textFieldMdp.text!) else {
+            DialogBoxHelper.alert(view: self, withTitle: "Pas de compte",andMessage:"Mauvais mot de passe ou mail")
+            return
+        }
+        
+        if (user.accepter ){
             performSegue(withIdentifier: toMenu, sender: self)
         }else{
-            DialogBoxHelper.alert(view: self, withTitle: "Pas de compte",andMessage:"Mauvais mot de passe ou mail")
+            DialogBoxHelper.alert(view: self, withTitle: "Pas encore accepté",andMessage:"Désolé vous n'avez pas encore été accepté")
         }
 
     }
