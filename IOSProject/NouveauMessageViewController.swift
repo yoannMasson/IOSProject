@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NouveauMessageViewController: UIViewController {
+class NouveauMessageViewController: ColorViewController {
 
 
     @IBOutlet weak var messageTitle: UITextField!
@@ -18,6 +18,7 @@ class NouveauMessageViewController: UIViewController {
     @IBOutlet weak var admin: UISwitch!
     @IBOutlet weak var respo: UISwitch!
     
+    let backtoMenu = "backToMenu"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,7 @@ class NouveauMessageViewController: UIViewController {
         }
         
         CoreDataManager.sendMessage(view: self, title: messageTitleToSend, userMessage: messagetoSend, etud:etud.isOn, prof:prof.isOn, admin:admin.isOn, respo:respo.isOn)
-        
+        performSegue(withIdentifier: backtoMenu, sender: self)
         
         
     }

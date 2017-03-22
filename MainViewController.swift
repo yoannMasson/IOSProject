@@ -52,8 +52,10 @@ class MainViewController: UIViewController, UITextFieldDelegate, UIApplicationDe
         if (user.accepter ){
             performSegue(withIdentifier: toMenu, sender: self)
         }else{
+            performSegue(withIdentifier: toMenu, sender: self)
+
             DialogBoxHelper.alert(view: self, withTitle: "Pas encore accepté",andMessage:"Désolé vous n'avez pas encore été accepté")
-        }
+                   }
 
     }
     

@@ -138,6 +138,17 @@ class CoreDataManager: NSObject{
         }
     }
     
+    ///
+    /// Send a message
+    ///
+    /// - Parameters:
+    ///     -view: the view to display an error if needed
+    ///     -title: the title of the message
+    ///     -userMessage: the message
+    ///     -etud: a boolean saying wether the student should recieve the message or not 
+    ///     -prof: a boolean saying wether the prof should recieve the message or not 
+    ///     -admin: a boolean saying wether the admin should recieve the message or not
+    ///     -respo: a boolean saying wether the respo should recieve the message or not
     class func sendMessage(view: UIViewController,title: String, userMessage: String, etud: Bool, prof: Bool, admin: Bool, respo: Bool){
         let message = Message(context: CoreDataManager.context)
         if(etud){
@@ -161,7 +172,6 @@ class CoreDataManager: NSObject{
         message.auteur = Connexion.getUser()
         message.message = userMessage
         message.titre = title
-        print(message.destinataire)
         
         CoreDataManager.save()
     }

@@ -25,7 +25,8 @@ class ColorViewController: UIViewController {
                 self.view.backgroundColor = UIColor.green
             case "blue":
                 self.view.backgroundColor = UIColor.blue
-        default: break
+        default:
+                self.view.backgroundColor = UIColor.clear
             
         }
         // Do any additional setup after loading the view.

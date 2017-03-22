@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Groupe" representedClassName="Groupe" syncable="YES" codeGenerationType="class">
-        <attribute name="nom" transient="YES" attributeType="String" syncable="YES">
+        <attribute name="nom" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="key" value="value"/>
             </userInfo>
@@ -27,7 +27,7 @@
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="auteur" inverseEntity="Message" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Groupe" positionX="682" positionY="135" width="128" height="88"/>
+        <element name="Groupe" positionX="682" positionY="135" width="128" height="90"/>
         <element name="Message" positionX="421" positionY="-135" width="128" height="118"/>
         <element name="Utilisateur" positionX="261" positionY="108" width="128" height="165"/>
     </elements>

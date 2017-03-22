@@ -394,7 +394,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG8-ea-ydr">
-                                            <rect key="frame" x="8" y="29" width="686.5" height="21"/>
+                                            <rect key="frame" x="8" y="29" width="687" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="RaI-he-KJz"/>
                                             </constraints>
@@ -403,13 +403,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-67-L5k">
-                                            <rect key="frame" x="0.0" y="58" width="702.5" height="75"/>
+                                            <rect key="frame" x="0.0" y="58" width="703" height="75"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQX-H1-Wfu">
-                                            <rect key="frame" x="0.0" y="0.0" width="702.5" height="21"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="55v-t1-c3h"/>
                                                 <constraint firstAttribute="height" constant="21" id="EIx-lB-YnY"/>
@@ -461,7 +461,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qrQ-ue-BkI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2xb-VO-dVE">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -489,7 +489,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zJ1-d5-gE3">
-                                <rect key="frame" x="0.0" y="100" width="702.5" height="523"/>
+                                <rect key="frame" x="0.0" y="100" width="703" height="523"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -518,14 +518,14 @@
                                 </constraints>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="meL-gE-7Qg">
-                                <rect key="frame" x="222" y="657" width="51" height="31"/>
+                                <rect key="frame" x="221.5" y="657" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="1hZ-15-uIK"/>
                                     <constraint firstAttribute="height" constant="31" id="xrd-Me-vw2"/>
                                 </constraints>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1oQ-OR-BI0">
-                                <rect key="frame" x="432" y="657" width="51" height="31"/>
+                                <rect key="frame" x="432.5" y="657" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="Tc1-I6-GfA"/>
                                     <constraint firstAttribute="height" constant="31" id="qIe-4K-nAQ"/>
@@ -538,7 +538,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONq-gz-HFg">
-                                <rect key="frame" x="386" y="636" width="141" height="21"/>
+                                <rect key="frame" x="386.5" y="636" width="141" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="4Kk-Zi-elQ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="141" id="ZVE-5C-pa1"/>
@@ -559,7 +559,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professeur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ct-En-KYg">
-                                <rect key="frame" x="188" y="636" width="117" height="21"/>
+                                <rect key="frame" x="187.5" y="636" width="117" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="5D7-27-rk0"/>
                                     <constraint firstAttribute="width" constant="117" id="M4e-Zd-IJr"/>
@@ -619,7 +619,7 @@
                         <outlet property="prof" destination="meL-gE-7Qg" id="MnK-5e-OxH"/>
                         <outlet property="respo" destination="EgK-cL-PhL" id="sZ7-sY-F4s"/>
                         <outlet property="title" destination="5v4-Gj-3U3" id="un2-Lc-OAO"/>
-                        <segue destination="xcv-d8-zwG" kind="show" identifier="toMenu" id="NOG-Cw-T6L"/>
+                        <segue destination="M1s-ji-4XA" kind="show" identifier="backToMenu" id="ej6-iq-yf1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gh1-qc-TWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -686,7 +686,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1Q-IM-J4C">
-                                <rect key="frame" x="252" y="369" width="200" height="30"/>
+                                <rect key="frame" x="251.5" y="369" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.95118199481865284" green="0.8549629469793647" blue="0.30667831646556676" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="2kr-Ab-VIR"/>
@@ -707,7 +707,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6N5-dv-sw3">
-                                <rect key="frame" x="153" y="426" width="398" height="292"/>
+                                <rect key="frame" x="152.5" y="426" width="398" height="292"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="398" id="t06-4C-xiq"/>
                                     <constraint firstAttribute="height" constant="292" id="wdy-2f-HU4"/>
@@ -815,7 +815,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NOG-Cw-T6L"/>
+        <segue reference="ej6-iq-yf1"/>
         <segue reference="rfj-TC-2Hl"/>
         <segue reference="2g6-ZA-FE5"/>
     </inferredMetricsTieBreakers>
