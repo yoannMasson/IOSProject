@@ -12,6 +12,12 @@
 		5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE51E5DE2130006C13F /* CoreDataManager.swift */; };
 		5C284FE81E5DE5150006C13F /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */; };
 		5C2CDA881E60696600CDD0DC /* Connexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CDA871E60696600CDD0DC /* Connexion.swift */; };
+		5C49E8401E8409DB005D4E12 /* BrightnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49E83F1E8409DB005D4E12 /* BrightnessView.swift */; };
+		5C49E8451E840A00005D4E12 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49E8411E840A00005D4E12 /* ColorUtils.swift */; };
+		5C49E8461E840A00005D4E12 /* ColorWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49E8421E840A00005D4E12 /* ColorWheel.swift */; };
+		5C49E8471E840A00005D4E12 /* SelectedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49E8431E840A00005D4E12 /* SelectedColorView.swift */; };
+		5C49E8481E840A00005D4E12 /* SwiftHSVColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49E8441E840A00005D4E12 /* SwiftHSVColorPicker.swift */; };
+		5C49E84E1E841CD6005D4E12 /* DocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C49E84D1E841CD6005D4E12 /* DocumentTableViewController.swift */; };
 		5C695D751E8120D400C501AB /* myMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C695D741E8120D400C501AB /* myMenuTableViewCell.swift */; };
 		5C8E220F1E7153A80018A95E /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E220E1E7153A80018A95E /* MessageTableViewController.swift */; };
 		5C8E22111E7155F80018A95E /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8E22101E7155F80018A95E /* MessageTableViewCell.swift */; };
@@ -54,6 +60,12 @@
 		5C284FE51E5DE2130006C13F /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5C284FE71E5DE5150006C13F /* DialogBoxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		5C2CDA871E60696600CDD0DC /* Connexion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connexion.swift; sourceTree = "<group>"; };
+		5C49E83F1E8409DB005D4E12 /* BrightnessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrightnessView.swift; sourceTree = "<group>"; };
+		5C49E8411E840A00005D4E12 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		5C49E8421E840A00005D4E12 /* ColorWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorWheel.swift; sourceTree = "<group>"; };
+		5C49E8431E840A00005D4E12 /* SelectedColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedColorView.swift; sourceTree = "<group>"; };
+		5C49E8441E840A00005D4E12 /* SwiftHSVColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHSVColorPicker.swift; sourceTree = "<group>"; };
+		5C49E84D1E841CD6005D4E12 /* DocumentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentTableViewController.swift; sourceTree = "<group>"; };
 		5C695D741E8120D400C501AB /* myMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myMenuTableViewCell.swift; sourceTree = "<group>"; };
 		5C8E220E1E7153A80018A95E /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		5C8E22101E7155F80018A95E /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +128,40 @@
 			name = ClassHelper;
 			sourceTree = "<group>";
 		};
+		5C49E8491E840A06005D4E12 /* CouleurPicker */ = {
+			isa = PBXGroup;
+			children = (
+				5C49E8411E840A00005D4E12 /* ColorUtils.swift */,
+				5C49E8421E840A00005D4E12 /* ColorWheel.swift */,
+				5C49E8431E840A00005D4E12 /* SelectedColorView.swift */,
+				5C49E8441E840A00005D4E12 /* SwiftHSVColorPicker.swift */,
+				5C49E83F1E8409DB005D4E12 /* BrightnessView.swift */,
+			);
+			name = CouleurPicker;
+			sourceTree = "<group>";
+		};
+		5C49E84A1E841B2F005D4E12 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Option;
+			sourceTree = "<group>";
+		};
+		5C49E84B1E841B36005D4E12 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		5C49E84C1E841B3D005D4E12 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				5C49E84D1E841CD6005D4E12 /* DocumentTableViewController.swift */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
 		5C695D731E81209100C501AB /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +214,10 @@
 		5CB1E7BB1E51A42200A424AD /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
+				5C49E84C1E841B3D005D4E12 /* Document */,
+				5C49E84B1E841B36005D4E12 /* Calendar */,
+				5C49E84A1E841B2F005D4E12 /* Option */,
+				5C49E8491E840A06005D4E12 /* CouleurPicker */,
 				5CC155211E82BB7600003B35 /* Admin */,
 				5C695D731E81209100C501AB /* Menu */,
 				5C8E220D1E7152450018A95E /* Inscription */,
@@ -347,7 +397,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC1551E1E82B0B200003B35 /* ColorViewController.swift in Sources */,
+				5C49E8451E840A00005D4E12 /* ColorUtils.swift in Sources */,
 				5C1B01DD1E6E965200ADFC95 /* MasterViewController.swift in Sources */,
+				5C49E8471E840A00005D4E12 /* SelectedColorView.swift in Sources */,
 				5C284FE61E5DE2130006C13F /* CoreDataManager.swift in Sources */,
 				5C8E220F1E7153A80018A95E /* MessageTableViewController.swift in Sources */,
 				5C695D751E8120D400C501AB /* myMenuTableViewCell.swift in Sources */,
@@ -357,12 +409,16 @@
 				5C94A2491E71613400393E54 /* NouveauMessageViewController.swift in Sources */,
 				5CC155231E82BBD800003B35 /* AdminViewController.swift in Sources */,
 				5C8E22111E7155F80018A95E /* MessageTableViewCell.swift in Sources */,
+				5C49E84E1E841CD6005D4E12 /* DocumentTableViewController.swift in Sources */,
 				5CA7BEB41E543F830013CCDA /* MainViewController.swift in Sources */,
 				5C2CDA881E60696600CDD0DC /* Connexion.swift in Sources */,
 				5C284FE31E5DCA8D0006C13F /* QuiEtesVousViewController.swift in Sources */,
 				5CB1E7BD1E51A42200A424AD /* AppDelegate.swift in Sources */,
+				5C49E8481E840A00005D4E12 /* SwiftHSVColorPicker.swift in Sources */,
 				5C284FE81E5DE5150006C13F /* DialogBoxHelper.swift in Sources */,
 				5CB1E7C01E51A42200A424AD /* IOSProject.xcdatamodeld in Sources */,
+				5C49E8401E8409DB005D4E12 /* BrightnessView.swift in Sources */,
+				5C49E8461E840A00005D4E12 /* ColorWheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,63 +9,39 @@
 import UIKit
 
 class colorPickerViewController: ColorViewController {
+    
+    private static var vue : colorPickerViewController?
+    private static var backgroundColor : UIColor?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let colorPicker = SwiftHSVColorPicker(frame: CGRect(origin: CGPoint(x: 100,y :100), size: CGSize(width: 500, height: 500))  )
+        self.view.addSubview(colorPicker)
+        colorPicker.setViewColor(UIColor.red)
+        colorPickerViewController.vue = self
         // Do any additional setup after loading the view.
     }
-
+    
+    class func getVue() -> colorPickerViewController? {
+        return colorPickerViewController.vue
+    }
+    
+    class func getColor() -> UIColor? {
+        return colorPickerViewController.backgroundColor
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func blue(_ sender: Any) {
-        guard let user = Connexion.getUser() else{
-            DialogBoxHelper.alert(view: self, withTitle:"pb connection", andMessage:"Pas de user connecté" )
-            return
-        }
+    func setBackground(color: UIColor){
         
-        user.couleur = "blue"
-        CoreDataManager.save()
-        super.viewDidLoad()
+        colorPickerViewController.backgroundColor = color
+        
     }
 
-    @IBAction func green(_ sender: Any) {
-        guard let user = Connexion.getUser() else{
-            DialogBoxHelper.alert(view: self, withTitle:"pb connection", andMessage:"Pas de user connecté" )
-            return
-        }
-        
-        user.couleur = "green"
-        CoreDataManager.save()
-        super.viewDidLoad()
-
-    }
-    
-    @IBAction func red(_ sender: Any) {
-        guard let user = Connexion.getUser() else{
-            DialogBoxHelper.alert(view: self, withTitle:"pb connection", andMessage:"Pas de user connecté" )
-            return
-        }
-        
-        user.couleur = "red"
-        CoreDataManager.save()
-        super.viewDidLoad()
-
-    }
-    
-    @IBAction func normal(_ sender: Any) {
-        guard let user = Connexion.getUser() else{
-            DialogBoxHelper.alert(view: self, withTitle:"pb connection", andMessage:"Pas de user connecté" )
-            return
-        }
-        
-        user.couleur = nil
-        CoreDataManager.save()
-        super.viewDidLoad()
-    }
     /*
     // MARK: - Navigation
 

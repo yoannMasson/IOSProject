@@ -12,23 +12,14 @@ class ColorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let user = Connexion.getUser() else {
+        
+        guard let couleur = colorPickerViewController.getColor() else{
             return
         }
-        guard let couleur = user.couleur else{
-            return
-        }
-        switch(couleur){
-            case "red":
-                self.view.backgroundColor = UIColor.red
-            case "green":
-                self.view.backgroundColor = UIColor.green
-            case "blue":
-                self.view.backgroundColor = UIColor.blue
-        default:
-                self.view.backgroundColor = UIColor.clear
+        
+        self.view.backgroundColor = couleur
             
-        }
+        
         // Do any additional setup after loading the view.
     }
 

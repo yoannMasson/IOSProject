@@ -15,9 +15,10 @@ class MasterViewController: UITableViewController{
     let toMessage = "toMessage"
     let toDocument = "toDocument"
     let toCalendar = "toCalendar"
+    let toColor = "toColor"
     let toOption = "toOption"
     let toAdmin = "toAdmin"
-    var menus = ["Message","Documents","Calendrier","Options"]
+    var menus = ["Messages","Documents","Calendrier","Couleurs","Options"]
 
     // MARK: - Table view init
     override func viewDidLoad() {
@@ -63,15 +64,17 @@ class MasterViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row{
         case 0:
-            self.performSegue(withIdentifier: "toMessage", sender: self)
+            self.performSegue(withIdentifier: toMessage, sender: self)
         case 1:
-            self.performSegue(withIdentifier: "toDocument", sender: self)
+            self.performSegue(withIdentifier: toDocument, sender: self)
         case 2:
-            self.performSegue(withIdentifier: "toCalendar", sender: self)
+            self.performSegue(withIdentifier: toCalendar, sender: self)
         case 3:
-            self.performSegue(withIdentifier: "toOption", sender: self)
+            self.performSegue(withIdentifier: toColor, sender: self)
         case 4:
-            self.performSegue(withIdentifier: "toAdmin", sender: self)
+            self.performSegue(withIdentifier: toOption, sender: self)
+        case 5:
+            self.performSegue(withIdentifier: toAdmin, sender: self)
         default:
             DialogBoxHelper.alert(view: self, withTitle: "oulalal", andMessage: "erreur inconnu")
         }
