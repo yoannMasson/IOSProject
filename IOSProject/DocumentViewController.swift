@@ -1,5 +1,5 @@
 //
-//  AdminViewController.swift
+//  DocumentViewController.swift
 //  IOSProject
 //
 //  Created by Yoann MASSON on 23/03/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdminViewController: UIViewController {
+class DocumentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
