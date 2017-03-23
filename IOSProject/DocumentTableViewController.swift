@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import CoreData
 
 class DocumentTableViewController: UITableViewController {
+    
+    var documents : [Document] = []
+    let newDocument = "newDocument"
 
+    @IBOutlet weak var addDocument: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        documents = CoreDataManager.getDocument()
+        
+        if(!Connexion.isAdmin()){
+            addDocument.isHidden = true
+            addDocument.isEnabled = false
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +40,27 @@ class DocumentTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.documents.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DocumentTableViewCell
+        
+        cell.title.setTitle(documents[indexPath.row].titre, for: .normal) 
+        cell.url.text = documents[indexPath.row].url
+        
+        cell.documentDescription = documents[indexPath.row].documentDescription!
+        cell.table = self
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,9 +97,13 @@ class DocumentTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
+     @IBAction func goToNewDocument(_ sender: Any) {
+        performSegue(withIdentifier: newDocument, sender: self)
+     }
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.

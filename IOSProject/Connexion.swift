@@ -32,4 +32,11 @@ class Connexion {
         return self.user
     }
     
+    /// Check if the current user is an admin
+    class func isAdmin() -> Bool {
+        guard let user = Connexion.getUser() else {
+            return false
+        }
+        return user.groupe!.nom == GroupeName.administration || user.groupe!.nom == GroupeName.respo
+    }
 }

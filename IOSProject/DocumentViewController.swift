@@ -8,8 +8,15 @@
 
 import UIKit
 
-class DocumentViewController: UIViewController {
+class DocumentViewController: ColorViewController {
 
+
+    
+    @IBOutlet weak var documentTitle: UITextField!
+    @IBOutlet weak var documentDescription: UITextView!
+    @IBOutlet weak var documentUrl: UITextField!
+    let backToMenu = "backToMenu"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,9 +29,25 @@ class DocumentViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
+     @IBAction func addDocument(_ sender: Any) {
+        
+        guard let title = documentTitle.text, title != "" else{
+            DialogBoxHelper.alert(view: self, withTitle: "Pb Titre", andMessage: "veuillez renseigner un titre au document")
+            return
+        }
+        
+        guard let url = documentUrl.text, url != "" else{
+            DialogBoxHelper.alert(view: self, withTitle: "Pb Url", andMessage: "veuillez renseigner une url au document")
+            return
+        }
+        CoreDataManager.addDocument(title: title, description: documentDescription.text, url : url)
+        performSegue(withIdentifier: backToMenu, sender: self)
+     }
+    
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.

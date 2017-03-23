@@ -23,7 +23,7 @@ class MasterViewController: UITableViewController{
     // MARK: - Table view init
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(CoreDataManager.isAdmin()){
+        if(Connexion.isAdmin()){
             menus.append("Espace Administrateur")
         }
 

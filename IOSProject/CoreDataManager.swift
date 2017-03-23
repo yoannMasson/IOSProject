@@ -101,13 +101,7 @@ class CoreDataManager: NSObject{
         return userToReturn
     }
     
-    /// Check if the current user is an admin
-    class func isAdmin() -> Bool {
-        guard let user = Connexion.getUser() else {
-           return false
-        }
-        return user.groupe!.nom == GroupeName.administration || user.groupe!.nom == GroupeName.respo
-    }
+
     
     // MARK: -- Messages functions
     
@@ -200,6 +194,46 @@ class CoreDataManager: NSObject{
             exit(EXIT_FAILURE)
         }
     }
+    
+    
+    // MARK: -- Documents functions
+    
+    /// Get all the document
+    ///
+    /// - Parameters:
+    ///      -view: the view to display an error if no user is connected
+    class func getDocument() -> [Document] {
+
+
+        let request : NSFetchRequest<Document> = Document.fetchRequest()
+        do{
+            let documents = try context.fetch(request)
+            return documents
+        }
+        catch _ as NSError{
+            exit(EXIT_FAILURE)
+        }
+        
+    }
+    
+    ///
+    /// Send a message
+    ///
+    /// - Parameters:
+
+
+    class func addDocument(title : String, description: String?,url: String){
+        let document = Document(context: CoreDataManager.context)
+        document.titre = title
+        document.url = url
+        if (description != nil){
+            document.documentDescription = description
+        }else{
+            document.documentDescription = "Pas de description pour ce document"
+        }
+        CoreDataManager.save()
+    }
+
 
 }
 
