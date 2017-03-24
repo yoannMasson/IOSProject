@@ -11,17 +11,27 @@ import UIKit
 class DocumentTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var title: UIButton!
     @IBOutlet weak var url: UITextView!
     var documentDescription: String = ""
+    var document : Document?
     var table : DocumentTableViewController?
 
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if(!Connexion.isAdmin()){
+            deleteButton.isEnabled = false
+            deleteButton.isHidden = true
+        }
     }
 
+    @IBAction func deleteDocument(_ sender: Any) {
+        CoreDataManager.context.delete(document!)
+    }
+    
     @IBAction func showDescription(_ sender: Any) {
         guard let table = self.table else {
             return

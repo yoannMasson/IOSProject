@@ -51,7 +51,7 @@ class DocumentTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DocumentTableViewCell
-        
+        cell.document = documents[indexPath.row]
         cell.title.setTitle(documents[indexPath.row].titre, for: .normal) 
         cell.url.text = documents[indexPath.row].url
         
