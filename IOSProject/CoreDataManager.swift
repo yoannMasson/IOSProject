@@ -49,6 +49,26 @@ class CoreDataManager: NSObject{
     }
     
     
+    class func getUnacceptedUsers() -> [Utilisateur]{
+        
+        let request : NSFetchRequest<Utilisateur> = Utilisateur.fetchRequest()
+        var usersToReturn : [Utilisateur] = []
+        do{
+            let users = try context.fetch(request)
+            for user in users {
+                if(!user.accepter){
+                    usersToReturn.append(user)
+                }
+            }
+            return usersToReturn
+        }
+        catch _ as NSError{
+            exit(EXIT_FAILURE)
+        }
+    }
+    
+    
+    
     /// Save a new user
     ///
     /// - Parameters:
