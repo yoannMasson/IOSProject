@@ -49,6 +49,25 @@ class CoreDataManager: NSObject{
     }
     
     
+    /// Update the name or/and firstname of the connecteduser
+    ///
+    /// - Parameters:
+    ///      -name: the name of the new user
+    ///      -firstName: the first name of the new user
+    class func updateUser(name: String, firstName: String){
+        guard let user = Connexion.getUser() else{
+            return
+        }
+        user.nom = name
+        user.prenom = firstName
+        CoreDataManager.save()
+    }
+    
+    class func getNbUncheckedUser() -> Int {
+        return getUnacceptedUsers().count
+    }
+    
+    /// Return all the unaccepted user in an array
     class func getUnacceptedUsers() -> [Utilisateur]{
         
         let request : NSFetchRequest<Utilisateur> = Utilisateur.fetchRequest()
@@ -151,7 +170,7 @@ class CoreDataManager: NSObject{
             exit(EXIT_FAILURE)
         }
     }
-    
+
     ///
     /// Send a message
     ///

@@ -17,7 +17,7 @@ class colorPickerViewController: ColorViewController {
         super.viewDidLoad()
         let colorPicker = SwiftHSVColorPicker(frame: CGRect(origin: CGPoint(x: 100,y :100), size: CGSize(width: 500, height: 500))  )
         self.view.addSubview(colorPicker)
-        colorPicker.setViewColor(UIColor.red)
+        colorPicker.setViewColor(UIColor.white)
         colorPickerViewController.vue = self
         // Do any additional setup after loading the view.
     }

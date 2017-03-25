@@ -20,6 +20,7 @@ class MasterViewController: UITableViewController{
     let toAdmin = "toAdmin"
     var menus = ["Messages","Documents","Calendrier","Couleurs","Options"]
 
+    
     // MARK: - Table view init
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,12 @@ class MasterViewController: UITableViewController{
     
         let menu = self.menus[indexPath.row]
         cell.textMenu?.text = menu
+        
+        if(cell.textMenu.text == "Espace Administrateur" && CoreDataManager.getNbUncheckedUser() != 0 ){
+            cell.nbUncheckedUser.text = "( \(CoreDataManager.getNbUncheckedUser()) )"
+        }else{
+            cell.nbUncheckedUser.isHidden = true
+        }
 
         return cell
     }

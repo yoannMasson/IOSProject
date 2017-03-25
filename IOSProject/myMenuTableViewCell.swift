@@ -11,6 +11,8 @@ import UIKit
 class myMenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var textMenu: UILabel!
+    @IBOutlet weak var nbUncheckedUser: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
