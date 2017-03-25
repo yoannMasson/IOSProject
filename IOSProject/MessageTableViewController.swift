@@ -7,21 +7,40 @@
 //
 
 import UIKit
+import CoreData
 
-class MessageTableViewController: UITableViewController {
+class MessageTableViewController: UITableViewController, UISearchBarDelegate, NSFetchedResultsControllerDelegate {
     
+    //TODO add a date to a message
+    fileprivate lazy var messagesFetched : NSFetchedResultsController<Message> = {
+        let request :  NSFetchRequest<Message> =  Message.fetchRequest()
+        request.predicate = NSPredicate(format: "ANY destinataire.nom == %@", Connexion.getUser()!.groupe!.nom!)
+        request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Message.date),ascending:false)]
+        let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchResultController.delegate = self
+        return fetchResultController
+    }()
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     var messages : [Message] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         messages = CoreDataManager.getMessage(view: self)
-        
+        do{
+            try self.messagesFetched.performFetch()
+            self.tableView.reloadData()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,22 +56,58 @@ class MessageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.messages.count
+        guard let section = self.messagesFetched.sections?[section] else {
+            fatalError("unexpected section number")
+        }
+        return section.numberOfObjects
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MessageTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MessageTableViewCell
+        let messageToDisplay = self.messagesFetched.object(at: indexPath)
+        cell.setTitle(title: messageToDisplay.titre!)
+        cell.setAuthor(author: (messageToDisplay.auteur?.nom ?? "")!+" "+(messageToDisplay.auteur?.prenom ?? "")!)
+        cell.setMessage(message: messageToDisplay.message ?? "")
 
-        cell.setTitle(title: self.messages[indexPath.row].titre!)
-        cell.setAuthor(author: (self.messages[indexPath.row].auteur?.nom)!+" "+(self.messages[indexPath.row].auteur?.prenom)!)
-        cell.setMessage(message: self.messages[indexPath.row].message!)
-        
         
         return cell
     }
     
 
+    func searchBar(_: UISearchBar, textDidChange: String){
+        if textDidChange != "" {
+            let predicate =  NSPredicate(format: "message CONTAINS[c] %@", textDidChange)
+            self.update(predicate: predicate)
+        }
+        
+    }
+    
+    //MARK Update tableView
+    
+    func update(predicate: NSPredicate){
+        
+        let messagesFetchedUpdated : NSFetchedResultsController<Message> = {
+            let request :  NSFetchRequest<Message> =  Message.fetchRequest()
+            let predicate1 : NSPredicate = NSPredicate(format: "ANY destinataire.nom == %@", Connexion.getUser()!.groupe!.nom!)
+            var predicates : [NSPredicate] = []
+            predicates.append(predicate1)
+            predicates.append(predicate)
+            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+            request.sortDescriptors = [NSSortDescriptor(key:#keyPath(Message.date),ascending:false)]
+            let fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: CoreDataManager.context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchResultController.delegate = self
+            return fetchResultController
+        }()
+
+        self.messagesFetched = messagesFetchedUpdated
+        do{
+            try self.messagesFetched.performFetch()
+            self.tableView.reloadData()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -15,6 +15,7 @@ class OptionViewController: ColorViewController {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     let backToMenu = "backToMenu"
+    let disconnect = "disconnect"
     
 
     override func viewDidLoad() {
@@ -39,6 +40,10 @@ class OptionViewController: ColorViewController {
 
     
     // MARK: - Navigation
+    @IBAction func disconnect(_ sender: Any) {
+        Connexion.disconnect()
+        performSegue(withIdentifier: disconnect, sender: self)
+    }
 
      @IBAction func updateInfo(_ sender: Any) {
         guard let user = Connexion.getUser() else {

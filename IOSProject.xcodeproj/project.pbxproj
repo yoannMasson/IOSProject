@@ -37,6 +37,7 @@
 		5CC1551E1E82B0B200003B35 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1551D1E82B0B200003B35 /* ColorViewController.swift */; };
 		5CC155201E82B21C00003B35 /* colorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC1551F1E82B21C00003B35 /* colorPickerViewController.swift */; };
 		5CC470101E868429009777ED /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4700F1E868429009777ED /* OptionViewController.swift */; };
+		5CC470161E86C1AA009777ED /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC470151E86C1AA009777ED /* EventViewController.swift */; };
 		5CCF422A1E858A850029CE91 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF42291E858A850029CE91 /* AdminTableViewController.swift */; };
 		5CCF422C1E858BA00029CE91 /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF422B1E858BA00029CE91 /* AdminTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		5CC1551D1E82B0B200003B35 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		5CC1551F1E82B21C00003B35 /* colorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = colorPickerViewController.swift; sourceTree = "<group>"; };
 		5CC4700F1E868429009777ED /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		5CC470151E86C1AA009777ED /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		5CCF42291E858A850029CE91 /* AdminTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminTableViewController.swift; sourceTree = "<group>"; };
 		5CCF422B1E858BA00029CE91 /* AdminTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 		5C49E84B1E841B36005D4E12 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				5CC470151E86C1AA009777ED /* EventViewController.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				5C8E220F1E7153A80018A95E /* MessageTableViewController.swift in Sources */,
 				5C695D751E8120D400C501AB /* myMenuTableViewCell.swift in Sources */,
 				5CA7BEB91E5448180013CCDA /* DemandeInscriptionViewController.swift in Sources */,
+				5CC470161E86C1AA009777ED /* EventViewController.swift in Sources */,
 				5CC155201E82B21C00003B35 /* colorPickerViewController.swift in Sources */,
 				5C94A24B1E71728900393E54 /* GroupeName.swift in Sources */,
 				5CC470101E868429009777ED /* OptionViewController.swift in Sources */,

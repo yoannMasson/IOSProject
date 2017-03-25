@@ -6,8 +6,14 @@
         <attribute name="titre" attributeType="String" syncable="YES"/>
         <attribute name="url" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
+    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="evenementDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Groupe" representedClassName="Groupe" syncable="YES" codeGenerationType="class">
-        <attribute name="nom" optional="YES" attributeType="String" syncable="YES">
+        <attribute name="nom" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="key" value="value"/>
             </userInfo>
@@ -32,9 +38,11 @@
         <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="auteur" inverseEntity="Message" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Document" positionX="459" positionY="9" width="128" height="105"/>
-        <element name="Groupe" positionX="682" positionY="135" width="128" height="90"/>
+        <element name="Document" positionX="691" positionY="-126" width="128" height="105"/>
+        <element name="Groupe" positionX="682" positionY="135" width="128" height="88"/>
         <element name="Message" positionX="421" positionY="-135" width="128" height="118"/>
         <element name="Utilisateur" positionX="261" positionY="108" width="128" height="150"/>
+        <element name="Evenement" positionX="477" positionY="45" width="128" height="88"/>
+        <element name="Entity" positionX="486" positionY="54" width="128" height="45"/>
     </elements>
 </model>

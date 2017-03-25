@@ -40,4 +40,9 @@ class Connexion {
         }
         return user.groupe!.nom == GroupeName.administration || user.groupe!.nom == GroupeName.respo
     }
+    
+    //Disconnect the current user
+    class func disconnect() {
+        user = nil
+    }
 }

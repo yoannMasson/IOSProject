@@ -133,7 +133,7 @@ class CoreDataManager: NSObject{
         let users = self.getUsers()
         var userToReturn : Utilisateur?
         for user in users {
-            if (user.mail == login && password == user.mdp && user.accepter == true){
+            if (user.mail == login && password == user.mdp && user.accepter == true ){
                 userToReturn = user
             }
         }
@@ -205,6 +205,7 @@ class CoreDataManager: NSObject{
         message.auteur = Connexion.getUser()
         message.message = userMessage
         message.titre = title
+      //  message.date = NSDate.timeIntervalSinceReferenceDate
         
         CoreDataManager.save()
     }
