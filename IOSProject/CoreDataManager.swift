@@ -274,6 +274,22 @@ class CoreDataManager: NSObject{
         CoreDataManager.save()
     }
 
+    // MARK: -- Event functions
+    
+    /// Add a new event
+    ///
+    /// - Parameters:
+    ///      -title: the title of the event
+    ///      -date: the date of the event
+    ///      -description: the description of the event
+
+    class func addEvent(title:String, date: Date, description : String?){
+        let event = Evenement(context: CoreDataManager.context)
+        event.nom = title
+        event.date = date as NSDate
+        event.evenementDescription = description
+        CoreDataManager.save()
+    }
 
 }
 

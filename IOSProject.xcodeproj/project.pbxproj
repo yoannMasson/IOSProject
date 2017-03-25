@@ -40,6 +40,7 @@
 		5CC470161E86C1AA009777ED /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC470151E86C1AA009777ED /* EventViewController.swift */; };
 		5CCF422A1E858A850029CE91 /* AdminTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF42291E858A850029CE91 /* AdminTableViewController.swift */; };
 		5CCF422C1E858BA00029CE91 /* AdminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCF422B1E858BA00029CE91 /* AdminTableViewCell.swift */; };
+		5CD3FFF41E86CCEC0078A6B2 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3FFF31E86CCEC0078A6B2 /* NewEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		5CC470151E86C1AA009777ED /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		5CCF42291E858A850029CE91 /* AdminTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminTableViewController.swift; sourceTree = "<group>"; };
 		5CCF422B1E858BA00029CE91 /* AdminTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminTableViewCell.swift; sourceTree = "<group>"; };
+		5CD3FFF31E86CCEC0078A6B2 /* NewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				5CC470151E86C1AA009777ED /* EventViewController.swift */,
+				5CD3FFF31E86CCEC0078A6B2 /* NewEventViewController.swift */,
 			);
 			name = Calendar;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC1551E1E82B0B200003B35 /* ColorViewController.swift in Sources */,
+				5CD3FFF41E86CCEC0078A6B2 /* NewEventViewController.swift in Sources */,
 				5C49E8451E840A00005D4E12 /* ColorUtils.swift in Sources */,
 				5C1B01DD1E6E965200ADFC95 /* MasterViewController.swift in Sources */,
 				5CCF422C1E858BA00029CE91 /* AdminTableViewCell.swift in Sources */,
