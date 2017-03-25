@@ -114,7 +114,7 @@ class CoreDataManager: NSObject{
         let users = self.getUsers()
         var userToReturn : Utilisateur?
         for user in users {
-            if (user.mail == login && password == user.mdp){
+            if (user.mail == login && password == user.mdp && user.accepter == true){
                 userToReturn = user
             }
         }

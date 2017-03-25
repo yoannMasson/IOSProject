@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+
 class Connexion {
     
     private static var user: Utilisateur?
